@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -7,12 +10,18 @@ body {
     line-height: 1.6;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 
 main {
     max-width: 1000px;
     margin: 20px auto;
     padding: 0 15px;
 }
+
 
 .cabecalho {
     background-color: navy;
@@ -23,19 +32,41 @@ main {
 
 .cabecalho h1 {
     font-size: 36px;
+    margin: 0 0 15px 0;
+}
+
+
+.cabecalho h1 .nome {
+    display: inline-block;
+    background-color: royalblue;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 20px;
 }
 
 .menu a {
     color: white;
     text-decoration: none;
-    margin: 0 12px;
     font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .menu a:hover {
     color: gold;
     text-decoration: underline;
 }
+
 
 .secao {
     background-color: white;
@@ -55,6 +86,23 @@ main {
 }
 
 
+.apresentacao {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.apresentacao img {
+    width: 180px;
+    border-radius: 50%;
+    border: 4px solid royalblue;
+}
+
+.apresentacao .texto {
+    flex: 1;
+}
+
+
 .cards {
     display: flex;
     gap: 20px;
@@ -66,26 +114,59 @@ main {
     border: 2px solid lightblue;
     border-radius: 12px;
     padding: 20px;
-    flex: 1;
-    min-width: 250px;
+    flex: 1 1 250px;
+    min-width: 0;
+    overflow-wrap: break-word;
 }
 
 
-.botao {
+.botao,
+button {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 16px;
     background-color: royalblue;
     color: white;
     text-decoration: none;
+    border: 3px solid navy;         
     border-radius: 8px;
     font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                background-color 0.3s ease,
+                border-color 0.3s ease;
 }
 
-.botao:hover {
+.botao:hover,
+button:hover {
     background-color: mediumblue;
+    border-color: gold;              
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
+.botao:active,
+button:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+button {
+    padding: 12px;
+    background-color: navy;
+    border: 3px solid royalblue;
+}
+
+button:hover {
+    background-color: royalblue;
+    border-color: gold;
+}
+
+
+.tabela-wrapper {
+    overflow-x: auto;   
+}
 
 table {
     width: 100%;
@@ -119,23 +200,21 @@ label {
     font-weight: bold;
 }
 
-input, textarea {
+input,
+textarea {
+    width: 100%;
     margin-top: 5px;
     padding: 10px;
     border: 1px solid lightgray;
     border-radius: 6px;
-    font-size: 14px;
+    font-size: 16px;
+    font-family: inherit;
 }
 
-button {
-    margin-top: 15px;
-    padding: 12px;
-    background-color: navy;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
+input:focus,
+textarea:focus {
+    outline: 2px solid royalblue;
+    border-color: royalblue;
 }
 
 
@@ -149,16 +228,71 @@ footer {
 
 
 @media (max-width: 768px) {
-    .menu a {
-        display: block;
-        margin: 10px 0;
+    main {
+        padding: 0 10px;
     }
 
-    .cards {
-        flex-direction: column;
+    .cabecalho {
+        padding: 20px;
     }
 
     .cabecalho h1 {
         font-size: 28px;
+    }
+
+    .menu {
+        flex-direction: column;     
+        align-items: center;
+        gap: 5px;
+    }
+
+    .menu a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .apresentacao {
+        flex-direction: column;     
+        text-align: center;
+    }
+
+    .apresentacao img {
+        width: 150px;
+    }
+
+    .cards {
+        flex-direction: column;     
+    }
+
+    .card {
+        flex: 1 1 100%;
+    }
+
+    .secao,
+    .extra {
+        padding: 18px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .cabecalho h1 {
+        font-size: 22px;
+    }
+
+    .cabecalho h1 .nome {
+        padding: 6px 12px;
+    }
+
+    .botao,
+    button {
+        display: block;
+        width: 100%;               
+        text-align: center;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 14px;
     }
 }
