@@ -141,18 +141,48 @@
 
             <h2>Entre em contato</h2>
 
-            <form>
+            <p>
+                Prefere falar direto comigo? Escreva para
+                <a href="mailto:SEU-EMAIL@exemplo.com" id="canal-real">SEU-EMAIL@exemplo.com</a>.
+            </p>
+
+            <p class="aviso-demo">
+                <strong>Modo demonstração:</strong> este formulário simula o envio.
+                Nenhum e-mail é enviado de verdade.
+            </p>
+
+            <form id="form-contato" novalidate aria-describedby="status-form">
 
                 <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome">
+                <input type="text" id="nome" name="nome" autocomplete="name" maxlength="80"
+                    required aria-describedby="erro-nome">
+                <p class="erro-campo" id="erro-nome" hidden></p>
 
                 <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email">
+                <input type="email" id="email" name="email" autocomplete="email" maxlength="120"
+                    required aria-describedby="erro-email">
+                <p class="erro-campo" id="erro-email" hidden></p>
 
                 <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" rows="5"></textarea>
+                <textarea id="mensagem" name="mensagem" rows="5" maxlength="1000"
+                    required aria-describedby="erro-mensagem"></textarea>
+                <p class="erro-campo" id="erro-mensagem" hidden></p>
 
-                <button type="submit">Enviar</button>
+                <fieldset class="controle-teste">
+                    <legend>Controle de teste (só para a demonstração)</legend>
+                    <label class="opcao">
+                        <input type="radio" name="resultado" value="sucesso" checked>
+                        Simular sucesso
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="resultado" value="falha">
+                        Simular falha
+                    </label>
+                </fieldset>
+
+                <button type="submit" id="btn-enviar">Enviar</button>
+
+                <div id="status-form" class="status" role="status" aria-live="polite" aria-atomic="true"></div>
 
             </form>
 
@@ -165,6 +195,8 @@
         <p>Portfólio de Pedro Lucas - 2026</p>
 
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 
