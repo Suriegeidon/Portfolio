@@ -296,3 +296,99 @@ footer {
         font-size: 14px;
     }
 }
+
+
+/* ===== Passo 6: estados do formulário ===== */
+
+.aviso-demo {
+    background-color: lightyellow;
+    border-left: 6px solid gold;
+    border-radius: 6px;
+    padding: 10px 14px;
+}
+
+.erro-campo {
+    margin: 6px 0 0 0;
+    color: #8b0000;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.erro-campo::before {
+    content: "⚠ ";
+}
+
+input[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+    border: 2px solid #8b0000;
+}
+
+.controle-teste {
+    margin-top: 18px;
+    border: 1px dashed gray;
+    border-radius: 8px;
+    padding: 10px 14px;
+}
+
+.controle-teste legend {
+    font-weight: bold;
+    padding: 0 6px;
+}
+
+.controle-teste .opcao {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+    font-weight: normal;
+}
+
+.controle-teste .opcao input {
+    width: auto;
+    margin: 0;
+}
+
+/* Botão em processamento: continua visível, mas não reage */
+button[aria-disabled="true"] {
+    cursor: not-allowed;
+    background-color: slategray;
+    border-color: darkslategray;
+    transform: none;
+    box-shadow: none;
+}
+
+button[aria-disabled="true"]:hover,
+button[aria-disabled="true"]:active {
+    background-color: slategray;
+    border-color: darkslategray;
+    transform: none;
+    box-shadow: none;
+}
+
+.status {
+    margin-top: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.status:not(:empty) {
+    padding: 12px 14px;
+    border: 2px solid;
+}
+
+/* Cada estado tem ícone + texto, não só cor */
+.status.processando { background: aliceblue; border-color: royalblue; color: navy; }
+.status.processando::before { content: "⏳ "; }
+
+.status.sucesso { background: #e6f4ea; border-color: #1e7e34; color: #145a24; }
+.status.sucesso::before { content: "✔ "; }
+
+.status.falha { background: #fdecea; border-color: #8b0000; color: #8b0000; }
+.status.falha::before { content: "✖ "; }
+
+.status.erro { background: #fff4e5; border-color: #b45f06; color: #7a3e00; }
+.status.erro::before { content: "⚠ "; }
+
+@media (prefers-reduced-motion: reduce) {
+    button, .botao { transition: none; }
+}
