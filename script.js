@@ -45,7 +45,7 @@ if (year) year.textContent = new Date().getFullYear();
 // Troque a URL abaixo pela URL da sua função "send-contact".
 // Formato: https://SEU-PROJETO.supabase.co/functions/v1/send-contact
 // ---------------------------------------------------------------
-const CONTACT_ENDPOINT = "'https://lrhskereycfgucrihyqq.supabase.co/functions/v1/hyper-processor";
+const CONTACT_ENDPOINT = "https://lrhskereycfgucrihyqq.supabase.co/functions/v1/hyper-processor";
 
 const contactForm = document.getElementById("contact-form");
 const formNote = document.getElementById("form-note");
