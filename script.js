@@ -81,7 +81,7 @@ if (contactForm) {
       email: data.get("email"),
       subject: data.get("subject"),
       message: data.get("message"),
-      website: data.get("website") // campo-armadilha anti-spam
+      website: data.get("website") 
     };
 
     try {
