@@ -69,8 +69,13 @@
       <div class="section-heading reveal"><span class="section-kicker">01 — QUEM SOU</span><h2>Sobre <span class="gradient-text">mim</span></h2><p>Conhecimento se constrói com curiosidade, prática e constância.</p></div>
       <div class="about-grid">
         <article class="about-card glass-card reveal">
-          <span class="card-overline">MINHA TRAJETÓRIA</span>
-          <h3>Olá! Prazer,<br>sou <span class="gradient-text">Pedro Lucas.</span></h3>
+          <div class="about-profile">
+            <div class="avatar-ring"><div class="avatar-frame"><img class="avatar" src="foto-pedro.jpg" alt="Foto de Pedro Lucas" width="704" height="1520" loading="lazy"></div></div>
+            <div class="about-profile-text">
+              <span class="card-overline">MINHA TRAJETÓRIA</span>
+              <h3>Olá! Prazer,<br>sou <span class="gradient-text">Pedro Lucas.</span></h3>
+            </div>
+          </div>
           <p>Sou estudante de Análise e Desenvolvimento de Sistemas, interessado no universo da tecnologia e no desenvolvimento de soluções que unam funcionalidade, criatividade e uma boa experiência para as pessoas.</p>
           <p>Ao longo da minha formação, venho construindo uma base em lógica de programação, desenvolvimento de software e tecnologias web. Tenho dedicado atenção especial à linguagem Java, enquanto amplio meus conhecimentos em outras ferramentas e linguagens importantes para a área.</p>
           <p>Considero cada desafio uma oportunidade de evolução. Busco aprender continuamente, aprimorar minha capacidade de resolver problemas e transformar o conhecimento adquirido em projetos práticos. Meu objetivo é crescer profissionalmente e contribuir com soluções úteis, bem estruturadas e acessíveis.</p>
@@ -90,7 +95,7 @@
     <section class="section-shell skills-section" id="habilidades">
       <div class="section-heading reveal"><span class="section-kicker">02 — CAIXA DE FERRAMENTAS</span><h2>Minhas <span class="gradient-text">habilidades</span></h2><p>Tecnologias e ferramentas que fazem parte da minha jornada de aprendizado.</p></div>
       <div class="skills-grid">
-        <article class="skill-card glass-card reveal"><span class="skill-icon java">☕</span><div><h3>Java</h3><p>Intermediário</p></div><span class="skill-tag">PROGRAMAÇÃO</span></article>
+        <article class="skill-card glass-card reveal"><span class="skill-icon java">☕</span><div><h3>Java</h3><p>Intermediário</p></div><span class="skill-tag">PROGRAMação</span></article>
         <article class="skill-card glass-card reveal"><span class="skill-icon html">5</span><div><h3>HTML</h3><p>Em desenvolvimento</p></div><span class="skill-tag">WEB</span></article>
         <article class="skill-card glass-card reveal"><span class="skill-icon css">3</span><div><h3>CSS</h3><p>Em desenvolvimento</p></div><span class="skill-tag">WEB</span></article>
         <article class="skill-card glass-card reveal"><span class="skill-icon js">JS</span><div><h3>JavaScript</h3><p>Em desenvolvimento</p></div><span class="skill-tag">WEB</span></article>
@@ -111,7 +116,7 @@
         </div>
         <div class="project-info"><span class="project-number">PROJETO 01 / DESIGN DE INTERFACE</span><h3>Campus<span class="gradient-text">Connect</span></h3><p>Protótipo de uma proposta de aplicativo voltado ao ambiente universitário. A ideia é facilitar a localização de espaços no campus e reunir informações úteis para a comunidade acadêmica em uma experiência digital intuitiva.</p><div class="project-tags"><span>Figma</span><span>UI/UX</span><span>Prototipação</span></div><a class="button button-primary" href="https://www.figma.com/make/yuv2HvqdBgO4FFkBkZgX4M/CampusConnect-mobile-prototype?t=vC7dMRf7eZiBPGOr-1&preview-route=%2Fmenu" target="_blank" rel="noopener noreferrer">Explorar protótipo <span>↗</span></a></div>
       </article>
-      <div class="project-footnote"><span class="pulse"></span> Este é um projeto acadêmico de prototipação. Novos trabalhos serão adicionados conforme forem desenvolvidos.</div>
+      <div class="project-footnote"><span class="pulse"></span> Este é um projeto acadêmico/de prototipação. Novos trabalhos serão adicionados conforme forem desenvolvidos.</div>
     </section>
 
     <section class="section-shell extra-section">
@@ -127,18 +132,15 @@
       <div class="section-heading reveal"><span class="section-kicker">05 — VAMOS CONVERSAR</span><h2>Entre em <span class="gradient-text">contato</span></h2><p>Tem uma oportunidade, uma ideia ou deseja trocar conhecimentos? Será um prazer receber sua mensagem.</p></div>
       <div class="contact-grid">
         <aside class="contact-aside glass-card reveal"><span class="card-overline">FALE COMIGO</span><h3>Vamos construir<br>algo <span class="gradient-text">interessante?</span></h3><p>Estou aberto a conhecer novas oportunidades, participar de projetos e conversar sobre tecnologia, desenvolvimento e aprendizado.</p><div class="contact-method"><span class="contact-icon">✉</span><div><small>E-MAIL</small><a href="mailto:Pedroameira61@gmail.com">Pedroameira61@gmail.com</a></div></div><div class="contact-method"><span class="contact-icon">⌖</span><div><small>LOCALIZAÇÃO</small><span>Bahia, Brasil</span></div></div><div class="availability"><span class="pulse"></span> Aberto a novas conexões</div></aside>
-        <form class="contact-form glass-card reveal" id="contact-form" action="https://formsubmit.co/Pedroameira61@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="Nova mensagem pelo portfólio de Pedro Lucas">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="true">
-          <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off">
+        <form class="contact-form glass-card reveal" id="contact-form" novalidate>
+          <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="form-heading"><h3>Envie uma mensagem</h3><span>Responderei assim que possível.</span></div>
           <label for="contact-name">Seu nome</label><input id="contact-name" name="name" type="text" placeholder="Como posso te chamar?" maxlength="90" required>
           <label for="contact-email">Seu e-mail</label><input id="contact-email" name="email" type="email" placeholder="voce@exemplo.com" maxlength="120" required>
           <label for="contact-subject">Assunto</label><input id="contact-subject" name="subject" type="text" placeholder="Sobre o que deseja conversar?" maxlength="120" required>
           <label for="contact-message">Mensagem</label><textarea id="contact-message" name="message" rows="5" placeholder="Escreva sua mensagem..." minlength="10" maxlength="2000" required></textarea>
           <button class="button button-primary submit-button" type="submit">Enviar mensagem <span>↗</span></button>
-          <p class="form-note" id="form-note">Ao enviar, sua mensagem será encaminhada para o e-mail de contato informado nesta página.</p>
+          <p class="form-note" id="form-note" role="status" aria-live="polite">Sua mensagem será enviada diretamente para o e-mail do Pedro.</p>
         </form>
       </div>
     </section>
