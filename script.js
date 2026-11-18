@@ -18,7 +18,7 @@ if (menuButton && navigation) {
   });
 }
 
-// Anima os elementos conforme entram na área visível da tela.
+
 const revealElements = document.querySelectorAll(".reveal");
 
 if ("IntersectionObserver" in window) {
@@ -36,15 +36,11 @@ if ("IntersectionObserver" in window) {
   revealElements.forEach((element) => element.classList.add("visible"));
 }
 
-// Atualiza o ano automaticamente no rodapé.
+
 const year = document.getElementById("year");
 if (year) year.textContent = new Date().getFullYear();
 
-// ---------------------------------------------------------------
-// Formulário de contato → Supabase (Edge Function) → Resend
-// Troque a URL abaixo pela URL da sua função "send-contact".
-// Formato: https://SEU-PROJETO.supabase.co/functions/v1/send-contact
-// ---------------------------------------------------------------
+
 const CONTACT_ENDPOINT = "https://lrhskereycfgucrihyqq.supabase.co/functions/v1/send-contact";
 
 const contactForm = document.getElementById("contact-form");
