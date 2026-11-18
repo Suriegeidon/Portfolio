@@ -1237,3 +1237,73 @@ a {
     transform: none;
   }
 }
+
+/* Estados do formulário de contato */
+.form-note.is-success {
+  color: #72e1b1;
+}
+
+.form-note.is-error {
+  color: #ff8a9b;
+}
+
+.submit-button:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Foto de perfil (Sobre mim) */
+.about-profile {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 8px;
+}
+
+.avatar-ring {
+  flex: 0 0 auto;
+  width: 148px;
+  height: 148px;
+  padding: 4px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #b48aff, #dc79e9 55%, #7edcf1);
+  box-shadow: 0 0 40px #8e5be544;
+}
+
+.avatar-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--bg);
+  background: var(--bg2);
+}
+
+/* Foto original, sem edição: o CSS só enquadra o rosto dentro do círculo */
+.avatar {
+  position: absolute;
+  left: 0;
+  top: -100%;
+  width: 163.7%;
+  height: auto;
+  max-width: none;
+}
+
+.about-profile-text h3 {
+  margin: 10px 0 0;
+}
+
+@media (max-width: 620px) {
+  .about-profile {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .avatar-ring {
+    width: 132px;
+    height: 132px;
+  }
+}
